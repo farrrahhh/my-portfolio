@@ -7,6 +7,8 @@ import Works from "../../public/components/Works";
 import TechSection from "../../public/components/TechSection";
 import Contact from "../../public/components/Contact";
 
+
+
 export default function Home() {
   return (
     <div>
