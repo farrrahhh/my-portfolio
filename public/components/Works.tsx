@@ -3,8 +3,9 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-import githubIcon from "../assets/github.png"; // Replace with actual path
+import Image from "next/image";
 
+// Motion Animation Variants
 const fadeIn = (direction = "up", type = "spring", delay = 0, duration = 0.75) => ({
   initial: { opacity: 0, y: direction === "up" ? 50 : -50 },
   animate: { opacity: 1, y: 0, transition: { type, delay, duration } },
@@ -15,42 +16,44 @@ const textVariant = () => ({
   animate: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 });
 
+// Project Data
 const projects = [
   {
-    name: "Car Rent",
-    description: "Web-based platform for renting cars with a user-friendly interface and secure booking system.",
+    name: "CapyLingo",
+    description: "CapyLingo is an interactive platform helping First-Year (TPB) students learn English through fun quizzes, modules, and activities, inspired by the calm yet smart capybara.",
     tags: [
-      { name: "react", color: "text-blue-400" },
-      { name: "mongodb", color: "text-green-400" },
-      { name: "tailwind", color: "text-pink-400" },
+      { name: "node", color: "text-blue-400" },
+      { name: "MySQL", color: "text-green-400" },
+      { name: "html css js", color: "text-pink-400" },
     ],
-    image: "./assets/tracer-study.png", // Replace with actual path
-    source_code_link: "https://github.com/",
+    image: "/assets/project1-.png", 
+    source_code_link: "https://github.com/farrrahhh/II3140-K2-Kel19",
   },
   {
-    name: "Job IT",
-    description: "A job portal to search for job openings and view salary insights based on location.",
+    name: "Machine Learning",
+    description: "Developed a machine learning model using CRISP-DM to classify URLs as phishing or legitimate, leveraging Naïve Bayes and KNN.",
     tags: [
-      { name: "react", color: "text-blue-400" },
-      { name: "restapi", color: "text-green-400" },
-      { name: "scss", color: "text-pink-400" },
+      { name: "python", color: "text-blue-400" },
+      { name: "numpy", color: "text-green-400" },
+      { name: "pandas", color: "text-pink-400" },
     ],
-    image: "/assets/iit.png",
-    source_code_link: "https://github.com/",
+    image: "/assets/project2.png",
+    source_code_link: "https://github.com/farrrahhh/49_Tugas_Besar_1_IF3070_Dasar_Inteligensi_Artifisial",
   },
   {
-    name: "Trip Guide",
-    description: "A travel booking website with curated recommendations for popular destinations.",
+    name: "HarmonyRoom",
+    description: "HarmonyRoom is a web platform that connects musicians with bandmates, studios, and instrument rentals, built with a service-oriented architecture for a seamless user experience.",
     tags: [
       { name: "nextjs", color: "text-blue-400" },
-      { name: "supabase", color: "text-green-400" },
-      { name: "css", color: "text-pink-400" },
+      { name: "tailwind", color: "text-green-400" },
+      { name: "react", color: "text-pink-400" },
     ],
-    image: "../assets/itb.png",
-    source_code_link: "https://github.com/",
+    image: "/assets/project3.png",
+    source_code_link: "https://github.com/farrrahhh/harmony-room",
   },
 ];
 
+// Project Card Component
 interface ProjectCardProps {
   index: number;
   name: string;
@@ -64,17 +67,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, name, description, tag
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
+        tiltMaxAngleX={45}
+        tiltMaxAngleY={45}
+        scale={1}
+        transitionSpeed={450}
         className="bg-[#15152a] p-5 rounded-2xl sm:w-[360px] w-full shadow-lg"
       >
         <div className="relative w-full h-[230px] rounded-2xl overflow-hidden">
-          <img src={image} alt="project_image" className="w-full h-full object-cover" />
+          <Image src={image} alt={name} layout="fill" objectFit="cover" className="rounded-2xl" priority={index < 2} />
           <div className="absolute inset-0 flex justify-end m-3">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="bg-black/60 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
-              <img src={githubIcon} alt="source code" className="w-6 h-6 object-contain" />
+              <Image src="/assets/github.png" alt="source code" width={24} height={24} />
             </div>
           </div>
         </div>
@@ -96,12 +102,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, name, description, tag
   );
 };
 
+// Works Component
 const Works = () => {
   return (
     <section id="projects" className="py-24 px-6 sm:px-12 md:px-20 lg:px-32 bg-[#0f0f1a]">
       <motion.div variants={textVariant()} className="text-center">
         <p className="text-gray-400 text-sm uppercase tracking-wide">My Work</p>
-        <h2 className="text-white text-5xl font-bold mt-2">Projects<span className="text-[#915EFF]">.</span></h2>
+        <h2 className="text-white text-5xl font-bold mt-2">
+          Projects<span className="text-[#915EFF]">.</span>
+        </h2>
       </motion.div>
 
       <div className="w-full flex justify-center">
