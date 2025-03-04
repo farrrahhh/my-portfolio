@@ -29,7 +29,7 @@ const Navbar = () => {
         >
           <Image src={logo} alt="logo" width={36} height={36} className="object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Farah &nbsp; <span className="sm:block hidden">| think #Creative</span>
+            Farah &nbsp; <span className="sm:block hidden">| be #Mastery</span>
           </p>
         </Link>
 

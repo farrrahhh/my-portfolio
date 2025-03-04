@@ -44,7 +44,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-24 px-6 sm:px-12 md:px-20 lg:px-32 bg-[#0f0f1a]">
+    <section id="contact" className="py-24 px-6 sm:px-12 md:px-20 lg:px-32 bg-gradient-to-b from-[#0f0f1a] to-[#1a1a3f]">
       <motion.div variants={fadeIn()} className="text-center">
         <p className="text-gray-400 text-sm uppercase tracking-wide">Get in Touch</p>
         <h2 className="text-white text-5xl font-bold mt-2">

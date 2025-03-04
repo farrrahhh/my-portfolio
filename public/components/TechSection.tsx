@@ -20,13 +20,13 @@ const techStack = [
   { name: "PostgreSQL", icon: "/assets/postgresql.png" },
   { name: "MongoDB", icon: "/assets/mongodb.png" },
   { name: "React.js", icon: "/assets/react.png" },
-  { name: "Next.js", icon: "/assets/nextjs.png" },
+  { name: "Next.js", icon: "/assets/nextjs.jpeg" },
   { name: "Node.js", icon: "/assets/nodejs.png" },
   { name: "Tailwind", icon: "/assets/tailwind.png" },
   { name: "ScikitLearn", icon: "/assets/scikitlearn.png" },
   { name: "Tableau", icon: "/assets/tableau.png" },
   { name: "Git", icon: "/assets/git.png" },
-  { name: "Postman", icon: "/assets/postman.png" },
+  { name: "Postman", icon: "/assets/postman.jpg" },
   { name: "Trello", icon: "/assets/trello.webp" },
 ];
 

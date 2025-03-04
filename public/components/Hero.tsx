@@ -116,7 +116,7 @@ const Hero = () => {
           className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
         >
           <motion.a
-            href="#about"
+            href="#work"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 text-base font-medium text-white bg-gradient-to-r from-[#915EFF] to-[#BD7AFF] rounded-full shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 transition-all duration-300"
@@ -134,15 +134,18 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+     {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-10 flex flex-col items-center"
+        className="absolute bottom-10 flex flex-col items-center cursor-pointer"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
+        onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })} // SCROLL ACTION
       >
         <span className="text-white/50 text-sm mb-2">Scroll to explore</span>
         <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
           className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10"
@@ -152,7 +155,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Tech stack floating badges */}
-      <div className="absolute bottom-40 left-10 hidden lg:block">
+      {/* <div className="absolute bottom-40 left-10 hidden lg:block">
         {["React", "Three.js", "TypeScript"].map((tech, i) => (
           <motion.div
             key={tech}
@@ -164,9 +167,9 @@ const Hero = () => {
             {tech}
           </motion.div>
         ))}
-      </div>
+      </div> */}
 
-      <div className="absolute bottom-40 right-10 hidden lg:block">
+      {/* <div className="absolute bottom-40 right-10 hidden lg:block">
         {["Node.js", "Tailwind", "WebGL"].map((tech, i) => (
           <motion.div
             key={tech}
@@ -178,7 +181,7 @@ const Hero = () => {
             {tech}
           </motion.div>
         ))}
-      </div>
+      </div> */}
     </section>
   )
 }

@@ -26,7 +26,8 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex flex-col justify-center py-24 px-6 sm:px-12 md:px-20 lg:px-32 bg-gradient-to-b from-[#0f0f1a] to-[#1a1a3f] overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center py-24 px-6 sm:px-12 md:px-20 lg:px-32 
+bg-gradient-to-b from-[#1a1a3f] to-[#0f0f1a]"
     >
       {/* Glowing Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">

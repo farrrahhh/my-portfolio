@@ -105,7 +105,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, name, description, tag
 // Works Component
 const Works = () => {
   return (
-    <section id="projects" className="py-24 px-6 sm:px-12 md:px-20 lg:px-32 bg-[#0f0f1a]">
+    <section id="work" className="py-24 px-6 sm:px-12 md:px-20 lg:px-32 bg-[#0f0f1a]">
       <motion.div variants={textVariant()} className="text-center">
         <p className="text-gray-400 text-sm uppercase tracking-wide">My Work</p>
         <h2 className="text-white text-5xl font-bold mt-2">
